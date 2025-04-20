@@ -8,6 +8,7 @@ qcom-pdc.ko
 phy-qcom-ufs.ko
 phy-qcom-ufs-qmp-v4-pineapple.ko
 phy-qcom-ufs-qrbtc-sdm845.ko
+phy-qcom-ufs-qmp-v4-crow.ko
 pinctrl-msm.ko
 pinctrl-pineapple.ko
 pinctrl-cliffs.ko
@@ -17,6 +18,7 @@ clk-dummy.ko
 gdsc-regulator.ko
 clk-rpmh.ko
 dispcc-pineapple.ko
+dispcc-volcano.ko
 gcc-cliffs.ko
 gcc-pineapple.ko
 gcc-volcano.ko
@@ -46,12 +48,14 @@ hwkm.ko
 tmecom-intf.ko
 gic_intr_routing.ko
 minidump.ko
+qcom_va_minidump.ko
+qcom_logbuf_vendor_hooks.ko
+qcom_logbuf_boot_log.ko
 gh_cpusys_vm_mem_access.ko
 qcom-pmu-lib.ko
 dcvs_fp.ko
 qcom-dcvs.ko
 qcom_scmi_client.ko
-mpam.ko
 qcom_cpucp.ko
 debug_symbol.ko
 proxy-consumer.ko
@@ -64,8 +68,10 @@ qcom_iommu_util.ko
 iommu-logger.ko
 qti-regmap-debugfs.ko
 zram.ko
+mpbe.ko
 mi_power.ko
 hwid.ko
+qcom-i2c-pmic.ko
 qcom-spmi-pmic.ko
 qcom_dma_heaps.ko
 spmi-pmic-arb.ko
@@ -106,14 +112,13 @@ icc-test.ko
 mi_memory.ko
 ufs_ffu.ko
 dump_display.ko
-mpam_arch.ko
-mpam_policy.ko
 mi_schedule.ko
 metis.ko
 mist.ko
 qrtr.ko
 qrtr-gunyah.ko
 msm_sysstats.ko
+crc-itu-t.ko
 msm_show_resume_irq.ko
 mhi.ko
 mhi_dev_uci.ko
@@ -123,8 +128,11 @@ pinctrl-spmi-gpio.ko
 pinctrl-spmi-mpp.ko
 pwm-qti-lpg.ko
 pci-msm-drv.ko
+qcom-spmi-wled.ko
 debugcc-cliffs.ko
 debugcc-pineapple.ko
+debugcc-volcano.ko
+camcc-volcano.ko
 gpucc-cliffs.ko
 gpucc-volcano.ko
 videocc-volcano.ko
@@ -152,9 +160,6 @@ llcc-qcom.ko
 llcc_perfmon.ko
 boot_stats.ko
 core_hang_detect.ko
-qcom_va_minidump.ko
-qcom_logbuf_vendor_hooks.ko
-qcom_logbuf_boot_log.ko
 hung_task_enh.ko
 mem-offline.ko
 msm_show_epoch.ko
@@ -164,6 +169,7 @@ qcom_ramdump.ko
 memlat.ko
 bwmon.ko
 c1dcvs_scmi_v2.ko
+mpam.ko
 cpufreq_stats_scmi_v2.ko
 dynpf_scmi.ko
 cpucp_log.ko
@@ -179,7 +185,10 @@ dmesg_dumper.ko
 health_monitor.ko
 qfprom-sys.ko
 qti-fixed-regulator.ko
+qcom_pm8008-regulator.ko
+qpnp-lcdb-regulator.ko
 qpnp-amoled-regulator.ko
+wl2866d.ko
 qti-ocp-notifier.ko
 hvc_gunyah.ko
 msm_geni_serial.ko
@@ -192,7 +201,6 @@ lt9611uxc.ko
 perf_helper.ko
 xiaomi_wifi_gpio.ko
 qseecom_proxy.ko
-qcom-i2c-pmic.ko
 sg.ko
 spi-msm-geni.ko
 spmi-pmic-arb-debug.ko
@@ -268,6 +276,8 @@ qcom-spmi-adc5-gen3.ko
 qcom-vadc-common.ko
 qti-glink-adc.ko
 nvmem_qfprom.ko
+mpam_arch.ko
+mpam_policy.ko
 binder_gki.ko
 millet_core.ko
 millet_pkg.ko
@@ -276,6 +286,7 @@ millet_binder.ko
 millet_sig.ko
 millet_oem_cgroup.ko
 migt.ko
+powersave.ko
 ofpart.ko
 chipreg.ko
 block2mtd.ko
